@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="contact.css"> <!-- Custom styles -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- AOS animation styles -->
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>REXIL DATOR</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100"><a href="home.htm" target="_self">Home</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200"><a href="about.htm" target="_self">About</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"><a href="project.htm" target="_self">Projects</a></div>
+                <div class="link contact-btn" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600"><a href="contact.htm" target="_self">Contact Me</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="home.htm" target="_self">Home</a>
+                <a href="about.htm" target="_self">About</a>
+                <a href="project.htm" target="_self">Projects</a>
+                <a href="contact.htm" target="_self">Contact Me</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="contact">
+        <h4 data-aos="zoom-in" data-aos-duration="1000">Let's Build Something Together!</h4>
+            <p data-aos="zoom-in" data-aos-duration="1000">I am always looking for new challenges and exciting opportunities to collaborate with like-minded people. If you think we can create something together, don’t hesitate to get in touch.</p>
+        <form>
+            <div class="form-row" data-aos="zoom-in" data-aos-duration="1000">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-row" data-aos="zoom-in" data-aos-duration="1000">
+                <input type="tel" placeholder="Mobile Number" required>
+                <input type="text" placeholder="Email Subject" required>
+            </div>
+            <div class="form-row" data-aos="zoom-in" data-aos-duration="1000">
+                <textarea placeholder="Your Message" rows="6" required></textarea>
+            </div>
+            <div class="button-container">
+            <button data-aos="zoom-in" data-aos-duration="1000">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
+</body>
+</html>

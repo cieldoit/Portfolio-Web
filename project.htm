@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="project.css"> <!-- Custom styles -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- AOS animation styles -->
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>REXIL DATOR</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100"><a href="home.htm" target="_self">Home</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200"><a href="about.htm" target="_self">About</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300"><a href="project.htm" target="_self">Projects</a></div>
+                <div class="link contact-btn" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600"><a href="contact.htm" target="_self">Contact Me</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="home.htm" target="_self">Home</a>
+                <a href="about.htm" target="_self">About</a>
+                <a href="project.htm" target="_self">Projects</a>
+                <a href="contact.htm" target="_self">Contact Me</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+<section> <!--Project Section-->
+    <div class="project">
+       <div class="moodmap">
+                 <img src="pictures/MoodMap.png" alt="" data-aos="zoom-in" data-aos-duration="1000">
+    <div >
+        <h3 data-aos="zoom-in" data-aos-duration="1000">MoodMap</h3>
+        <p style="text-indent: 2em;" data-aos="zoom-in" data-aos-duration="1000">Developed a machine learning model to analyze customer feedback and determine sentiment (positive, neutral, or negative). The project automates sentiment classification to help businesses gain actionable insights from user reviews. </p>
+            <h4 data-aos="zoom-in" data-aos-duration="1000">Technologies Used:</h4>
+        <ul data-aos="zoom-in" data-aos-duration="1000">
+            <li> Python (Pandas, NumPy)</li>
+            <li> Natural Language Toolkit (NLTK) (for text preprocessing)</li>
+            <li> Scikit-learn (for training machine learning models)</li>
+            <li>Matplotlib/Seaborn (for data visualization)</li>
+        </ul>
+            <button data-aos="zoom-in" data-aos-duration="1000"><a href="#">View Project</a></button>
+    </div>
+       </div>
+
+       <div class="skycast">
+        <img src="pictures/SkyCast.png" alt="" data-aos="zoom-in" data-aos-duration="1000">
+    <div>
+    <h3 data-aos="zoom-in" data-aos-duration="1000">SkyCast</h3>
+        <p style="text-indent: 2em;" data-aos="zoom-in" data-aos-duration="1000">A sleek web app delivering real-time weather updates, future forecasts, and location-based details like temperature, humidity, and wind speed. Designed for simplicity and ease of use.</p>
+    <h4 data-aos="zoom-in" data-aos-duration="1000">Technologies Used:</h4>
+        <ul data-aos="zoom-in" data-aos-duration="1000" >
+            <li>HTML, CSS, JavaScript (Frontend)</li>
+            <li>Python (Flask or Django for Backend)</li>
+            <li>OpenWeather API (for weather data)</li>
+            <li>Bootstrap (for responsive design)</li>
+            <li>Chart.js (for visualizing temperature trends)</li>
+        </ul>
+    <button data-aos="zoom-in" data-aos-duration="1000"><a href="#">View Project</a></button>
+</div>
+</div>
+
+    </div>
+</section>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
+</body>
+</html>

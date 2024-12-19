@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="about.css"> <!-- Custom styles -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- AOS animation styles -->
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>REXIL DATOR</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100"><a href="home.htm" target="_self">Home</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200"><a href="about.htm" target="_self">About</a></div>
+                <div class="link" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300"><a href="project.htm" target="_self">Projects</a></div>
+                <div class="link contact-btn" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600"><a href="contact.htm" target="_self">Contact Me</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="home.htm" target="_self">Home</a>
+                <a href="about.htm" target="_self">About</a>
+                <a href="project.htm" target="_self">Projects</a>
+                <a href="contact.htm" target="_self">Contact Me</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+        <section> <!--About Me Section-->
+        <div class="About">
+            <div class="about-me">
+                    <h2 data-aos="zoom-in-right" data-aos-duration="1000">About Me </h2>
+                    <img src="pictures/RexilDator.png" alt="" data-aos="zoom-in-right" data-aos-duration="1000">
+                    <p style="text-indent: 2em;" data-aos="zoom-in-right" data-aos-duration="1000">I’m a Software Engineer, Data Scientist, and Content Creator specializing in software development, data analysis, and machine learning, with a passion for simplifying tech. As a Software Engineer, I build and improve software systems, solve technical problems, and ensure smooth application performance using Python, Java, and C++. In Data Science, I analyze large datasets, build predictive models, and create visualizations using tools like Pandas and machine learning algorithms. As a Content Creator, I share tutorials, blogs, and videos to make tech knowledge accessible to all.</p>
+            </div>
+            <div class="skills">
+                    <h2 data-aos="zoom-in-right" data-aos-duration="1000">Skills</h2>
+                    <br>
+                        <fieldset>
+                            <legend data-aos="zoom-in-right" data-aos-duration="1000">Software Development and Data Science</legend>
+                            <p data-aos="zoom-in-right" data-aos-duration="1000">Proficient in Python, Java, C++, and other programming languages; experienced in data analysis, machine learning, and visualization. </p>
+                        </fieldset>
+                        <fieldset>
+                            <legend data-aos="zoom-in-right" data-aos-duration="1000">Problem Solving and Collaboration</legend>
+                            <p data-aos="zoom-in-right" data-aos-duration="1000">Strong ability to identify and solve technical problems in both software and data; comfortable working in teams and communicating technical concepts to non-technical audiences.</p>
+                        </fieldset>
+                            <fieldset>
+                                <legend data-aos="zoom-in-right" data-aos-duration="1000">Content Creation and Project Management</legend>
+                                <p data-aos="zoom-in-right" data-aos-duration="1000">Skilled in creating tutorials, blogs, and videos to explain complex topics in simple ways; able to manage multiple projects, meet deadlines, and deliver quality work.</p>
+                            </fieldset>
+            </div>
+        </div>
+        </section>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
+</body>
+</html>
